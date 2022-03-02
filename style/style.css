@@ -1,0 +1,8 @@
+header h1 {
+    background: #BE21CF;
+    background: -webkit-linear-gradient(to right, #BE21CF 29%, #CFBF32 80%);
+    background: -moz-linear-gradient(to right, #BE21CF 29%, #CFBF32 80%);
+    background: linear-gradient(to right, #BE21CF 29%, #CFBF32 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
