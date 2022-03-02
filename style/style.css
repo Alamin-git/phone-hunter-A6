@@ -6,3 +6,8 @@ header h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.result{
+    text-align: center;
+    
+}
