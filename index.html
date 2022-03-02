@@ -10,7 +10,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- castom css -->
     <link rel="stylesheet" href="style/style.css">
-    <title>Document</title>
+    <title>Find Your Phone</title>
 </head>
 
 <body>
@@ -21,12 +21,15 @@
     <main>
         <section class="container">
             <!-- search box -->
-            <div>
+            <div class="position-relativ">
                 <div class="input-group mb-5 input-group-lg mt-4 w-50 mx-auto ">
                     <input type="text" class="form-control shadow" placeholder="write phone name" aria-label=""
                         aria-describedby="button-addon2" id="search-field">
                     <button onclick="searchPhone()" class="btn btn-success shadow" type="button"
                         id="search-btn">Search</button>
+                </div>
+                <div id="spinner" class="spinner-grow position-absolute top-50 start-50" role="status">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
             <div id="result-div">

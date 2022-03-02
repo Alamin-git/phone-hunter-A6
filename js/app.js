@@ -1,9 +1,17 @@
+const toggleSpinner = displayStyle => {
+    document.getElementById('spinner').style.display = displayStyle;
+};
+
 // search button function 
 const searchPhone = () => {
+    // display spinner 
+    toggleSpinner('block');
+
     const searchFild = document.getElementById('search-field');
     const searchText = searchFild.value;
     // clear data 
     searchFild.value = '';
+
     // load data 
     const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
     fetch(url)
@@ -27,6 +35,9 @@ const searchResult = phones => {
             <p class="text-danger fs-3">No result found 😔</p>
         `;
         errorText.appendChild(error);
+
+        // display none spinner 
+        toggleSpinner('none');
     } else {
         phones.slice(0, 20).forEach(phone => {
             const div = document.createElement('div');
@@ -43,6 +54,9 @@ const searchResult = phones => {
             `;
             searchResult.appendChild(div);
         });
+
+        // display none spinner 
+        toggleSpinner('none');
     }
 };
 // phone detile api

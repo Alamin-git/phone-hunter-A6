@@ -28,3 +28,7 @@ header h1 {
 .size {
     width: 100%;
 }
+/* spinner area  */
+#spinner{
+    display: none;
+}
