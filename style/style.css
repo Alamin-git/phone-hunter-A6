@@ -1,3 +1,5 @@
+
+/* main header  */
 header h1 {
     background: #BE21CF;
     background: -webkit-linear-gradient(to right, #BE21CF 29%, #CFBF32 80%);
@@ -6,11 +8,11 @@ header h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-/* .result{
+/* error result  */
+.result{
     text-align: center;
-    
-} */
+}
+/* senso text style  */
 .sensors {
     background: #c5b7b78c;
     height: 30px;
@@ -21,4 +23,8 @@ header h1 {
     padding-right:  8px;
     border-radius: 15px;
     margin-bottom: 5px;
+}
+/* single card image sizing  */
+.size {
+    width: 100%;
 }

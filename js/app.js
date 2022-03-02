@@ -15,8 +15,10 @@ const searchResult = phones => {
     const searchResult = document.getElementById('search-result');
     // clean fild 
     searchResult.textContent = '';
-    const errorText = document.getElementById('error-massage');
+    // single card clear 
+    document.getElementById('phone-detiel').textContent = "";
     // cloar error text 
+    const errorText = document.getElementById('error-massage');
     errorText.textContent = '';
     if (phones.length === 0) {
         const error = document.createElement('div');
@@ -61,13 +63,15 @@ const showPhoneDetiels = phone => {
             <div class="card m-2" style="max-width:850px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="${phone.image}" class="img-fluid rounded-start mt-2 ms-2" alt="...">
+                        <img src="${phone.image}" class="img-fluid rounded-start mt-2 ms-2 size" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h2 class="card-title fs-1">${phone.brand}<h2>
                             <h2 class="fs-4">${phone.name}</h2>
                             <h5 class="fs-6">${phone.releaseDate}</h5>
+                            <br>
+                            <h5 class="fs-6 fw-bold">Detiles:</h5>
                             <p class="card-text">
                                 <small class="text-muted">Chipset: </small>${phone.mainFeatures.chipSet}
                             </p>
@@ -107,6 +111,21 @@ const showPhoneDetiels = phone => {
                                 ${phone.mainFeatures.sensors[10]}
                                 </p >
                             </div >
+                            <p class="card-text">
+                                <small class="text-muted">Bluetooth: </small>${phone.others.Bluetooth}
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">GPS: </small>${phone.others.GPS}
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">NFC: </small>${phone.others.NFC}
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">USB: </small>${phone.others.USB}
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">WLAN: </small>${phone.others.WLAN}
+                            </p>
                         </div >
                     </div >
                 </div >
