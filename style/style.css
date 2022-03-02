@@ -7,7 +7,18 @@ header h1 {
     -webkit-text-fill-color: transparent;
 }
 
-.result{
+/* .result{
     text-align: center;
     
+} */
+.sensors {
+    background: #c5b7b78c;
+    height: 30px;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 5px;
+    padding-left:  8px;
+    padding-right:  8px;
+    border-radius: 15px;
+    margin-bottom: 5px;
 }

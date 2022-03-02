@@ -26,7 +26,7 @@ const searchResult = phones => {
         `;
         errorText.appendChild(error);
     } else {
-        phones.forEach(phone => {
+        phones.slice(0, 20).forEach(phone => {
             const div = document.createElement('div');
             div.classList.add('col');
             div.innerHTML = `
@@ -58,21 +58,59 @@ const showPhoneDetiels = phone => {
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
-            <div class="card m-2" style="max-width: 550px;">
+            <div class="card m-2" style="max-width:850px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="${phone.image}" class="img-fluid rounded-start" alt="...">
+                        <img src="${phone.image}" class="img-fluid rounded-start mt-2 ms-2" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h2 class="card-title fs-4">${phone.name}</h2>
+                            <h2 class="card-title fs-1">${phone.brand}<h2>
+                            <h2 class="fs-4">${phone.name}</h2>
                             <h5 class="fs-6">${phone.releaseDate}</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <p class="card-text">
+                                <small class="text-muted">Chipset: </small>${phone.mainFeatures.chipSet}
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">displaySize: </small>${phone.mainFeatures.displaySize}
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">memory: </small>${phone.mainFeatures.memory}
+                            </p>
+                            <div>
+                                <small class="text-muted">sensors: </small>
+                                <p class="sensors">
+                                ${phone.mainFeatures.sensors[0]}
+                                </p >
+                                <p class="sensors">
+                                ${phone.mainFeatures.sensors[2]}
+                                </p >
+                                <p class="sensors">
+                                ${phone.mainFeatures.sensors[3]}
+                                </p >
+                                <p class="sensors">
+                                ${phone.mainFeatures.sensors[5]}
+                                </p >
+                                <p class="sensors">
+                                ${phone.mainFeatures.sensors[6]}
+                                </p >
+                                <p class="sensors">
+                                ${phone.mainFeatures.sensors[7]}
+                                </p >
+                                <p class="sensors">
+                                ${phone.mainFeatures.sensors[8]}
+                                </p >
+                                <p class="sensors">
+                                ${phone.mainFeatures.sensors[9]}
+                                </p >
+                                <p class="sensors">
+                                ${phone.mainFeatures.sensors[10]}
+                                </p >
+                            </div >
+                        </div >
+                    </div >
+                </div >
+            </div >
     `;
     phoneDetiel.appendChild(div);
 
