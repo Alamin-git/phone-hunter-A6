@@ -77,7 +77,7 @@ const showPhoneDetiels = phone => {
             <div class="card m-2" style="max-width:850px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="${phone.image}" class="img-fluid rounded-start mt-2 ms-2 size" alt="...">
+                        <img src="${phone.image}" class="img-fluid rounded-start mt-4 ms-2 size" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
